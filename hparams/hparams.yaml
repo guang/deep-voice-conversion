@@ -8,14 +8,14 @@ default:
 ---
 mol/lj:
   train2:
-    data_path: '/data/public/rw/LJSpeech-1.0_processed/*.wav'
+    data_path: '/home/paperspace/data/public/rw/LJSpeech-1.0_processed/*.wav'
   convert:
     batch_size: 3
     emphasis_magnitude: 1.3
 ---
 mol/lj/2:
   train2:
-    data_path: '/data/public/rw/LJSpeech-1.0_processed/*.wav'
+    data_path: '/home/paperspace/data/public/rw/LJSpeech-1.0_processed/*.wav'
     hidden_units: 512  # alias: E
     num_banks: 8
     num_highway_blocks: 16
@@ -32,9 +32,9 @@ mol/arctic:
 ---
 mol/iu:
   train2:
-    data_path: '/data/private/vc/datasets/IU/*_split/*.wav'
+    data_path: '/home/paperspace/data/private/vc/datasets/IU/*_split/*.wav'
     lr: 0.0001
   convert:
-    data_path: '/data/private/vc/datasets/test/2018.wav'
+    data_path: '/home/paperspace/data/private/vc/datasets/test/2018.wav'
     batch_size: 1
     emphasis_magnitude: 1.3
