@@ -27,7 +27,7 @@ mol/lj/2:
 ---
 mol/arctic:
   convert:
-    batch_size: 3
+    batch_size: 1
     lr: 0.0001
 ---
 mol/iu:
