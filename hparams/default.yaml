@@ -25,11 +25,11 @@ default:
     # train
     batch_size: 32
 
-logdir_path: '/data/private/vc/logdir'
+logdir_path: '/freeman_data/logdir'
 
 train1:
     # path
-    data_path: '/data/private/vc/datasets/timit/TIMIT/TRAIN/*/*/*.WAV'
+    data_path: '/freeman_data/training/TIMIT/TRAIN/*/*/*.WAV'
 
     # model
     hidden_units: 128  # alias: E
@@ -49,7 +49,7 @@ train1:
 ---
 train2:
     # path
-    data_path: '/data/private/vc/datasets/arctic/slt/*.wav'
+    data_path: '/freeman_data/training/net2/*.wav'
 
     # model
     hidden_units: 512  # alias: E
@@ -77,21 +77,21 @@ train2:
 ---
 test1:
     # path
-    data_path: '/data/private/vc/datasets/timit/TIMIT/TEST/*/*/*.WAV'
+    data_path: '/freeman_data/training/TIMIT/TEST/*/*/*.WAV'
 
     # test
     batch_size: 32
 ---
 test2:
     # path
-    data_path: '/data/private/vc/datasets/arctic/slt/*.wav'
+    data_path: '/freeman_data/training/net2/*.wav'
 
     # test
     batch_size: 32
 ---
 convert:
     # path
-    data_path: '/data/private/vc/datasets/arctic/bdl/*.wav'
+    data_path: '/freeman_data/inference/*.wav'
 
     # convert
     one_full_wav: False
