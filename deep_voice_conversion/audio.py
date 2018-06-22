@@ -79,7 +79,7 @@ def crop_random_wav(wav, length):
 
 def mp3_to_wav(src_path, tar_path):
     """
-    Read mp3 file from source path, convert it to wav and write it to target path. 
+    Read mp3 file from source path, convert it to wav and write it to target path.
     Necessary libraries: ffmpeg, libav.
 
     :param src_path: source mp3 file path

@@ -42,6 +42,11 @@ class Net2DataFlow(DataFlow):
             wav_file = random.choice(self.wav_files)
             yield get_mfccs_and_spectrogram(wav_file)
 
+    def get_data_for_infer(self):
+        # TODO: just use wav_file
+        wav_file = random.choice(self.wav_files)
+        return get_mfccs_and_spectrogram(wav_file, trim=False, random_crop=False)
+
 
 def load_data(mode):
     wav_files = glob.glob(getattr(hp, mode).data_path)
@@ -115,8 +120,6 @@ def get_mfccs_and_phones(wav_file, trim=False, random_crop=True):
 def get_mfccs_and_spectrogram(wav_file, trim=True, random_crop=False):
     '''This is applied in `train2`, `test2` or `convert` phase.
     '''
-
-
     # Load
     wav, _ = librosa.load(wav_file, sr=hp.default.sr)
 
@@ -172,5 +175,3 @@ def load_vocab():
     idx2phn = {idx: phn for idx, phn in enumerate(phns)}
 
     return phn2idx, idx2phn
-
-
